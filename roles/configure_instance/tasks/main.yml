@@ -22,4 +22,4 @@
     mode: u+x,g+x,o+x
 
 - name: run startup script
-  shell: cloud_sql_proxy
+  shell: cloud_sql_proxy -instances={{project}}:{{region}}:{{sql_instance}}=tcp:{{port}}
