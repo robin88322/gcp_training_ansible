@@ -1,4 +1,4 @@
-- hosts: bookshelf
+- hosts: localhost
   become: yes
   roles:
     - configure_instance
