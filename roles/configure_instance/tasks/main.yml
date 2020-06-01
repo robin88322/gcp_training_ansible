@@ -1,7 +1,7 @@
 - name: download fluentd
   get_url:
     url: https://storage.googleapis.com/signals-agents/logging/google-fluentd-install.sh
-    destination: google-fluentd-install.sh
+    dest: google-fluentd-install.sh
 
 - name: run startup script
   shell: google-fluentd-install.sh
@@ -14,7 +14,7 @@
 - name: download cloud SQL proxy
   get_url:
     url: https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
-    destination: cloud_sql_proxy
+    dest: cloud_sql_proxy
 
 - name: add permission
   file:
