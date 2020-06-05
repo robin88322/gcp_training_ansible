@@ -26,5 +26,14 @@
     path: /cloud_sql_proxy
     mode: u+x,g+x,o+x
 
-- name: run startup script
-  shell: /cloud_sql_proxy -instances={{project}}:{{region}}:{{sql_instance}}=tcp:{{port}}
+- name: Ansible template for cloudsql
+  template:
+        src: cloudsql_proxy.j2
+        dest: /etc/systemd/system/sql-daemon.service
+        mode: 0644
+
+- name: restart daemon
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: sql-daemon
