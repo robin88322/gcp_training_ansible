@@ -2,7 +2,7 @@
 Description=Foo
 
 [Service]
-ExecStart=./cloud_sql_proxy -instances={{project}}:{{region}}:{{sql_instance}}=tcp:{{port}}
+ExecStart=/cloud_sql_proxy -instances={{project}}:{{region}}:{{sql_instance}}=tcp:{{port}}
 
 [Install]
 WantedBy=multi-user.target
