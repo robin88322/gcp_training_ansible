@@ -26,7 +26,7 @@
     extra_args: --upgrade
     #executable: /opt/app/7-gce/env/bin/pip3
     virtualenv: /opt/app/7-gce/env
-    virtualenv_command: venv
+    virtualenv_command: virtualenv
     virtualenv_python: python3
 
 - name: install dependecies
