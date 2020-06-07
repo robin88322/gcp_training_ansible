@@ -3,3 +3,5 @@
   roles:
     - configure_instance
     - configure_application
+    - initialize_tables
+    - run_application

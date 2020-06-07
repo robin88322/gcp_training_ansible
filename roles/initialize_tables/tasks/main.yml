@@ -1,0 +1,12 @@
+- name: change premissions
+  file:
+    dest: /opt/app
+    owner: pythonapp
+    group: pythonapp
+    recurse: yes
+
+
+- name: initialize tables
+  script: /opt/app/7-gce/bookshelf/model_cloudsql.py
+  args:
+    executable: /opt/app/7-gce/env/bin/pip3

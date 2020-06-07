@@ -1,0 +1,14 @@
+- name: copy file
+  copy:
+    src: python-app.conf
+    dest: /etc/supervisor/conf.d/python-app.conf
+
+- name: run application
+  supervisorctl:
+    name: python-app
+    state: present
+
+- name: restart application
+  supervisorctl:
+    name: python-app
+    state: restarted
