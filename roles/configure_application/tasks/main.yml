@@ -1,6 +1,6 @@
 - name: Clone application from repo
   git:
-    repo: git@github.com:robin88322/getting-started-python.git
+    repo: https://github.com/robin88322/getting-started-python.git
     dest: /opt/app
     version: steps
 
