@@ -24,7 +24,7 @@
   pip:
     name: pip
     extra_args: --upgrade
-    executable: /opt/app/7-gce/env/bin/pip3
+    #executable: /opt/app/7-gce/env/bin/pip3
     virtualenv: /opt/app/7-gce/env
     virtualenv_command: venv
     virtualenv_python: python3
@@ -33,7 +33,7 @@
   pip:
     requirements: /opt/app/7-gce/requirements.txt
     virtualenv: /opt/app/7-gce/env
-    executable: /opt/app/7-gce/env/bin/pip3
+    #executable: /opt/app/7-gce/env/bin/pip3
 
 - name: create config.py
   template:
