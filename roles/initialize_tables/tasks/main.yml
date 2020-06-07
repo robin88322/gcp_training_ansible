@@ -9,4 +9,4 @@
 - name: initialize tables
   script: /opt/app/7-gce/bookshelf/model_cloudsql.py
   args:
-    executable: python3
+    executable: /opt/app/7-gce/env/bin/python3
