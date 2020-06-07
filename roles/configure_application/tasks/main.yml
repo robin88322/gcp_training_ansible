@@ -20,6 +20,11 @@
   user:
     name: pythonapp
 
+- name: Install virtualenv via pip
+  pip:
+    name: virtualenv
+    executable: pip3
+
 - name: upgrade pip
   pip:
     name: pip
