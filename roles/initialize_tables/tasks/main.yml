@@ -6,7 +6,12 @@
     recurse: yes
 
 
+#- name: initialize tables
+#  script: /opt/app/7-gce/bookshelf/model_cloudsql.py
+#  args:
+#    executable: /opt/app/7-gce/env/bin/python3
+
 - name: initialize tables
-  script: /opt/app/7-gce/bookshelf/model_cloudsql.py
-  args:
-    executable: /opt/app/7-gce/env/bin/python3
+  cmd:
+    chdir: /opt/app/7-gce/bookshelf/
+    cmd: /opt/app/7-gce/env/bin/python3 model_cloudsql.py
