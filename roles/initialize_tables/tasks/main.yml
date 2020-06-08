@@ -12,6 +12,6 @@
 #    executable: /opt/app/7-gce/env/bin/python3
 
 - name: initialize tables
-  cmd:
+  command:
     chdir: /opt/app/7-gce/bookshelf/
     cmd: /opt/app/7-gce/env/bin/python3 model_cloudsql.py
