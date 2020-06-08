@@ -5,10 +5,10 @@
 
 - name: run application
   supervisorctl:
-    name: python-app
+    name: pythonapp
     state: present
 
 - name: restart application
   supervisorctl:
-    name: python-app
+    name: pythonapp
     state: restarted

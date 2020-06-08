@@ -15,3 +15,8 @@
   command:
     chdir: /opt/app/7-gce/bookshelf/
     cmd: /opt/app/7-gce/env/bin/python3 model_cloudsql.py
+  register: result_tables
+
+- name: check if tables created
+  debug:
+    msg: {{result_tables}}
