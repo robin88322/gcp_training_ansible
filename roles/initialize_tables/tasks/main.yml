@@ -19,4 +19,4 @@
 
 - name: check if tables created
   debug:
-    msg: {{result_tables}}
+    msg: " {{ result_tables }} "
