@@ -10,11 +10,17 @@
 
 - name: run startup script
   shell: /google-fluentd-install.sh
+  register: result_fluentd
 
 - name: start fluentd
   service:
     name: google-fluentd
     state: restarted
+
+- name: check if tables created
+  debug:
+    msg: " {{ result_fluentd }} "
+
 
 - name: download cloud SQL proxy
   get_url:
