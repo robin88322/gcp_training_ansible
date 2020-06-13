@@ -1,16 +1,15 @@
 - name: download fluentd
   get_url:
     url: https://storage.googleapis.com/signals-agents/logging/google-fluentd-install.sh
-    dest: /google-fluentd-install.sh
+    dest: /{{ fluentd_startup_file }}
 
 - name: add permission to fluent
   file:
-    path: /google-fluentd-install.sh
+    path: /{{ fluentd_startup_file }}
     mode: u+x,g+x,o+x
 
 - name: run startup script
-  shell: /google-fluentd-install.sh
-  register: result_fluentd
+  shell: /{{ fluentd_startup_file }}
 
 - name: change log file
   copy:
