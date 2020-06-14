@@ -21,16 +21,16 @@
   pip:
     name: pip
     extra_args: --upgrade
-    virtualenv: "{{ instalation_path }}"/7-gce/env
+    virtualenv: "{{ instalation_path }}/7-gce/env"
     virtualenv_python: python3
 
 - name: install dependecies
   pip:
-    requirements: "{{ instalation_path }}"/7-gce/requirements.txt
-    executable: "{{ instalation_path }}"/7-gce/env/bin/pip3
+    requirements: "{{ instalation_path }}/7-gce/requirements.txt"
+    executable: "{{ instalation_path }}/7-gce/env/bin/pip3"
 
 - name: create config.py
   template:
         src: config.j2
-        dest: "{{ instalation_path }}"/7-gce/config.py
+        dest: "{{ instalation_path }}/7-gce/config.py"
         mode: 0666

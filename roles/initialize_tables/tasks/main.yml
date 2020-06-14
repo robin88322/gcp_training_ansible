@@ -7,8 +7,8 @@
 
 - name: initialize tables
   command:
-    chdir: {{ instalation_path }}/7-gce/bookshelf/
-    cmd: {{ instalation_path }}/7-gce/env/bin/python3 model_cloudsql.py
+    chdir: "{{ instalation_path }}/7-gce/bookshelf/"
+    cmd: "{{ instalation_path }}/7-gce/env/bin/python3 model_cloudsql.py"
   register: result_tables
 
 - name: check if tables created
