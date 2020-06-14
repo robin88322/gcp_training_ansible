@@ -1,8 +1,8 @@
 - name: change premissions
   file:
     dest: /opt/app
-    owner: {{ app_user }}
-    group: {{ app_user }}
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
     recurse: yes
 
 - name: initialize tables

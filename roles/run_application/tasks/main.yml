@@ -5,10 +5,10 @@
 
 - name: run application
   supervisorctl:
-    name: {{ app_user }}
+    name: "{{ app_user }}"
     state: present
 
 - name: restart application
   supervisorctl:
-    name:  {{ app_user }}
+    name:  "{{ app_user }}"
     state: restarted

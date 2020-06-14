@@ -1,16 +1,16 @@
 - name: Clone application from repo
   git:
-    repo: {{ app_repo }}
-    dest: {{ instalation_path }}
+    repo: "{{ app_repo }}"
+    dest: "{{ instalation_path }}"
     version: steps
 
 - name: install apt packages
   apt:
-    pkg: {{ package_list }}
+    pkg: "{{ package_list }}"
 
 - name: add user
   user:
-    name: {{ app_user }}
+    name: "{{ app_user }}"
 
 - name: Install virtualenv via pip
   pip:
